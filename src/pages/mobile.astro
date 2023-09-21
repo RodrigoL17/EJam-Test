@@ -1,0 +1,173 @@
+---
+import Step from "../components/Step.astro";
+import AmexIcon from "../components/icons/AmexIcon.astro";
+import ApplePayIcon from "../components/icons/ApplePayIcon.astro";
+import ArrowRight from "../components/icons/ArrowRight.astro";
+import BlueTick from "../components/icons/BlueTick.astro";
+import Dot from "../components/icons/Dot.astro";
+import GooglePayIcon from "../components/icons/GooglePayIcon.astro";
+import MasterCardIcon from "../components/icons/MasterCardIcon.astro";
+import NumberCircle from "../components/icons/NumberCircle.astro";
+import PayPalIcon from "../components/icons/PayPalIcon.astro";
+import PercentageCircle from "../components/icons/PercentageCircle.astro";
+import Star from "../components/icons/Star.astro";
+import TickCircle from "../components/icons/TickCircle.astro";
+import VisaIcon from "../components/icons/VisaIcon.astro";
+import LayoutMobile from "../layouts/LayoutMobile.astro";
+import Lock2 from "../components/icons/Lock2.astro";
+---
+
+<LayoutMobile title="Clarifion Upsell Mobile">
+  <main class="flex flex-col gap-6">
+    <header class="flex flex-col items-center gap-6">
+      <h2 class="text-black text-[32px] text-center capitalize leading-[34px]">
+        Wait ! your order in progress.
+      </h2>
+      <h3 class="text-neutral-600 text-[16px] text-center capitalize leading-3">
+        Lorem ipsum dolor sit amet, consectetur
+      </h3>
+    </header>
+    <div class="flex justify-between w-[320px] self-center">
+      <Step text="Cart Review" device="mobile">
+        <TickCircle slot="icon" device="mobile" />
+      </Step>
+      <Step text="Checkout" device="mobile">
+        <TickCircle slot="icon" device="mobile" />
+      </Step>
+      <Step text="Special Offer" bold={true} device="mobile">
+        <NumberCircle slot="icon" text="3" empty={false} device="mobile" />
+      </Step>
+      <Step text="Confirmation" device="mobile">
+        <NumberCircle slot="icon" text="4" empty={true} device="mobile" />
+      </Step>
+    </div>
+    <section class="flex flex-col gap-6 w-[320px] self-center justify-center">
+      <p class="text-[24px] capitalize leading-[28.5px] text-center">
+        <span class="text-blue-500">ONE TIME ONLY</span> special price for 6
+        extra Clarifion for only <span class="text-blue-500">$14 each</span>
+         ($84.00 total!)
+      </p>
+      <img
+        src="/prod.png"
+        alt="Product Image"
+        class="w-[320px] h-[328px] rounded-[10px]"
+      />
+      <div class="flex flex-col gap-4">
+        <div class="flex gap-4 items-center">
+          <div class="w-[80px] h-[80px] rounded-[10px] bg-[#2C7EF8]">
+            <img src="/prodmini.png" alt="Small Product Image" />
+          </div>
+          <div class="flex flex-col gap-[10px]">
+            <p
+              class="leading-[10px] text-[14px] flex w-[224px] items-center justify-between"
+            >
+              Clarifion Air Ionizer <span
+                class="flex gap-2 items-center leading-[10px]"
+                ><span class="text-[#969696] text-[10px]">$180</span><span
+                  class="text-blue-500 text-[14px] font-[600]">$84</span
+                ></span
+              >
+            </p>
+            <div class="flex">
+              <Star device="mobile" />
+              <Star device="mobile" />
+              <Star device="mobile" />
+              <Star device="mobile" />
+              <Star device="mobile" />
+            </div>
+            <div class="flex gap-4 items-center">
+              <Dot device="mobile" />
+              <p class="text-[12px] text-[#37465A] font-[300] leading-4">
+                12 left in Stock
+              </p>
+            </div>
+          </div>
+        </div>
+        <p class="text-[#4D5254] text-[12px] leading-[13px] text-center">
+          Simply plug a Clarifion into any standard outlet and replace bulky,
+          expensive air purifiers with a simple.
+        </p>
+      </div>
+      <div class="flex flex-col gap-4">
+        <div class="flex items-center gap-3">
+          <BlueTick device="mobile" />
+          <p class="text-[#4D5254] text-[12px] leading-[9px]">
+            Negative Ion Technology may <span class="font-bold"
+              >help with allergens
+            </span>
+          </p>
+        </div>
+        <div class="flex items-center gap-3">
+          <BlueTick device="mobile" />
+          <p class="text-[#4D5254] text-[12px] leading-[9px]">
+            Designed for air <span class="font-bold">rejuvenation</span>
+          </p>
+        </div>
+        <div class="flex items-center gap-3">
+          <BlueTick device="mobile" />
+          <p class="text-[#4D5254] text-[12px] leading-[9px]">
+            <span class="font-bold">Perfect for every room</span> in all types
+            of places.
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-4 px-4 py-3 bg-[#EDF3FD] rounded-[10px]"
+      >
+        <PercentageCircle device="mobile" />
+        <p class="leading-[20px] text-[14px]">
+          Save <span class="text-blue-500">53%</span> and get <span
+            class="text-blue-500">6 extra Clarifision</span
+          > for only <span class="text-blue-500">$14 Each</span>.
+        </p>
+      </div>
+      <div class="flex flex-col gap-3">
+        <button
+          class="uppercase bg-[#59AE43] py-4 px-[54px] rounded-[50px] flex justify-center items-center text-white gap-4 font-bold"
+        >
+          <p class="leading-[19px] text-[14px]">Yes - Claim my discount</p>
+          <ArrowRight device="mobile" />
+        </button>
+        <div
+          class="flex flex-col gap-3 items-center justify-center content-stretch py-2 px-3 rounded-[4px] border border-[#CFCFCF] text-xs leading-[18px] capitalize text-[#4D5254]"
+        >
+          <div class="flex items-center gap-3 leading-[9px] text-[12px]">
+            <p>Free shipping</p>
+            <span class="border border-[#CFCFCF] h-4"></span>
+            <p class="flex items-center gap-2">
+              <Lock2 />Secure 256-bit SSL encryption.
+            </p>
+          </div>
+          <span class="border border-[#CFCFCF] h-[1px] w-full"></span>
+          <div class="flex items-center gap-[2px]">
+            <VisaIcon />
+            <img src="/shoppay.svg" alt="" />
+            <PayPalIcon />
+            <MasterCardIcon />
+            <GooglePayIcon />
+            <ApplePayIcon />
+            <AmexIcon />
+          </div>
+        </div>
+        <p
+          class="text-[#F82C2C] font-[500] text-[12px] underline uppercase text-center leading-4"
+        >
+          No thanks, I don’t want this.
+        </p>
+      </div>
+      <div class="flex gap-4">
+        <img
+          class="w-[48px] h-[48px]"
+          src="/satisfaction.png"
+          alt="100% Guarantee Logo"
+        />
+        <p class="text-[#4D5254] text-[12px] leading-[1.1]">
+          If you are not completely thrilled with your Clarifion - We have a <span
+            class="font-bold">30 day satisfaction guarantee</span
+          >. Please refer to our return policy at the bottom of the page for
+          more details. Happy Shopping!
+        </p>
+      </div>
+    </section>
+  </main>
+</LayoutMobile>

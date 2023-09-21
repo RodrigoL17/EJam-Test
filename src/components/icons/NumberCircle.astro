@@ -1,14 +1,15 @@
 ---
-const { empty, text } = Astro.props;
+const { empty, text, device } = Astro.props;
 const fill = empty === true ? "none" : "#2C7EF8";
 const textColor = empty !== true ? "text-[#FFF]" : "text-[#2C7EF8]";
+const fontSize = device === "mobile" ? "text-[14px]" : null;
+const size = device === "mobile" ? "h-5 w-[21px]" : "h-10 w-[41]";
 ---
 
 <div class="flex justify-center items-center">
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="41"
-    height="40"
+    class={size}
     viewBox="0 0 41 40"
     fill="none"
   >
@@ -20,5 +21,5 @@ const textColor = empty !== true ? "text-[#FFF]" : "text-[#2C7EF8]";
       stroke="#2C7EF8"
       stroke-width="2"></circle>
   </svg>
-  <p class=`absolute z-10 ${textColor}`>{text}</p>
+  <p class=`absolute z-10 ${textColor} ${fontSize}`>{text}</p>
 </div>

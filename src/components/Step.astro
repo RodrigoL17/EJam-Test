@@ -1,8 +1,10 @@
 ---
-const {text, bold} = Astro.props
+const {text, bold, device} = Astro.props
 const boldText = bold === true ? "font-bold" : null
+const display = device === "mobile" ? "flex flex-col gap-2 items-center" : "flex gap-5 items-center"
+const fontSize = device === "mobile" ? "text-[12px] leading-[9px]" : null
 ---
-<div class="flex gap-5 items-center">
+<div class={display}>
     <slot name="icon"/>
-    <p class=`${boldText}`>{text}</p>
+    <p class=`${boldText} ${fontSize}`>{text}</p>
 </div>

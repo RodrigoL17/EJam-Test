@@ -1,10 +1,11 @@
 ---
-
+const { device } = Astro.props;
+const size = device === "mobile" ? "h-[13px] w-[13px]" : "h-4 w-4";
 ---
 
 <svg
   xmlns="http://www.w3.org/2000/svg"
-  class="h-[1rem] w-[1rem]"
+  class={size}
   viewBox="0 0 16 16"
   fill="none"
 >

@@ -1,0 +1,29 @@
+---
+import HeaderItem from "./HeaderItem.astro";
+import CaretLeft from "./icons/CaretLeft.astro";
+import CaretRight from "./icons/CaretRight.astro";
+import FluentCheckMark from "./icons/FluentCheckMark.astro";
+import McAffe from "./icons/McAffe.astro";
+import Norton from "./icons/Norton.astro";
+---
+
+<header class="w-full">
+  <div class="flex flex-col gap-5 pb-5">
+    <ul class="bg-[#252F3D] flex justify-between items-center py-[10px] px-[20px]">
+      <CaretLeft />
+      <HeaderItem text="30-DAY SATISFACTION GUARANTEE">
+        <FluentCheckMark slot="icon" />
+      </HeaderItem>
+      <CaretRight />
+    </ul>
+    <div
+      class="flex justify-between w-[320px] items-center self-center"
+    >
+      <img class="w-[106.67px] h-5" src="/clarifion.png" alt="clarifion logo" />
+      <div class="flex gap-4">
+        <McAffe device="mobile"/>
+        <Norton device="mobile"/>
+      </div>
+    </div>
+  </div>
+</header>

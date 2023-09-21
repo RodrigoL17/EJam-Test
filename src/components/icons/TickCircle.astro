@@ -1,12 +1,13 @@
 ---
-
+const { device } = Astro.props;
+const sizeCircle = device === "mobile" ? "w-5 h-5" : "w-10 h-10";
+const tickStyle = device === "mobile" ? "w-[13px] h-[9px] absolute z-10" : "w-6 h-[18px] absolute z-10";
 ---
 
 <div class="flex items-center justify-center">
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="40"
-    height="40"
+    class={sizeCircle}
     viewBox="0 0 40 40"
     fill="none"
   >
@@ -18,10 +19,9 @@
       stroke="#85BF55"
       stroke-width="2"></circle>
   </svg>
-  <svg class="absolute z-10"
+  <svg
+    class={tickStyle}
     xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="18"
     viewBox="0 0 24 18"
     fill="none"
   >
