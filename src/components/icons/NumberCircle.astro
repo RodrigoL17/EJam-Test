@@ -1,0 +1,24 @@
+---
+const { empty, text } = Astro.props;
+const fill = empty === true ? "none" : "#2C7EF8";
+const textColor = empty !== true ? "text-[#FFF]" : "text-[#2C7EF8]";
+---
+
+<div class="flex justify-center items-center">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="41"
+    height="40"
+    viewBox="0 0 41 40"
+    fill="none"
+  >
+    <circle
+      cx="20.3333"
+      cy="20"
+      r="19"
+      fill={fill}
+      stroke="#2C7EF8"
+      stroke-width="2"></circle>
+  </svg>
+  <p class=`absolute z-10 ${textColor}`>{text}</p>
+</div>

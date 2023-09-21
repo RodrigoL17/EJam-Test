@@ -1,0 +1,9 @@
+---
+const { text } = Astro.props;
+---
+
+<li class="text-primary flex items-center gap-2">
+  <slot name="icon" /><span
+    class="text-[#FFF] text-xs font-medium leading-[100%] uppercase">{text}</span
+  >
+</li>

@@ -1,0 +1,8 @@
+---
+const {text, bold} = Astro.props
+const boldText = bold === true ? "font-bold" : null
+---
+<div class="flex gap-5 items-center">
+    <slot name="icon"/>
+    <p class=`${boldText}`>{text}</p>
+</div>

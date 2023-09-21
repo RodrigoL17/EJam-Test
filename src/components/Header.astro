@@ -1,0 +1,25 @@
+---
+import HeaderItem from "./HeaderItem.astro";
+import ArrowSyncCheckmark from "./icons/ArrowSyncCheckmark.astro";
+import FluentCheckMark from "./icons/FluentCheckMark.astro";
+import HeartOutline from "./icons/HeartOutline.astro";
+import PhTruckLight from "./icons/PhTruckLight.astro";
+
+---
+
+<header class="bg-[#252F3D] w-full absolute">
+  <ul class="flex justify-around items-center flex-shrink-0 h-[3.125rem]">
+    <HeaderItem text="30-DAY SATISFACTION GUARANTEE">
+        <FluentCheckMark slot="icon"/>
+    </HeaderItem>
+    <HeaderItem text="Free delivery on orders over $40.00">
+        <PhTruckLight slot="icon"/>
+    </HeaderItem>
+    <HeaderItem text="50.000+ HAPPY CUSTOMERS">
+        <HeartOutline slot="icon"/>
+    </HeaderItem>
+    <HeaderItem text="100% Money Back Guarantee">
+        <ArrowSyncCheckmark slot="icon"/>
+    </HeaderItem>
+  </ul>
+</header>
